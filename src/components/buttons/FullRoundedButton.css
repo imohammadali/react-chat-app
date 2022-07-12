@@ -1,0 +1,2 @@
+.rounded-button {
+    @apply h-10 w-10 p-2 flex justify-center items-center text-white bg-gray-600 rounded-full}
