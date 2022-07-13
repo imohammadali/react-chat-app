@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const server = require("http").Server(app);
 const { v4: uuidv4 } = require("uuid");
+const cors = require('cors');
 const io = require("socket.io")(server, {
   cors: {
     origin: '*'
@@ -11,7 +12,7 @@ const { ExpressPeerServer } = require("peer");
 const peerServer = ExpressPeerServer(server, {
   debug: true,
 });
-
+app.use(cors());
 app.use("/peerjs", peerServer);
 app.use(express.static("../front/build"));
 
