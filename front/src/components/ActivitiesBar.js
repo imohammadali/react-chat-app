@@ -13,7 +13,7 @@ import activitiesIcon from '../images/activities.svg';
 
 import {FullRoundedButton} from "./buttons/FullRoundedButton";
 
-export function Footer({classroomName}){
+export function ActivitiesBar({classroomName}){
     return(
         <div className="flex p-5 items-center justify-around mt-5">
             <div className="text-white text-sm">{classroomName}</div>
