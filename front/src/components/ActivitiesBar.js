@@ -19,25 +19,22 @@ export function ActivitiesBar({classroomName}){
             <div className="text-white text-sm">{classroomName}</div>
             <div className="flex space-x-4">
                 <FullRoundedButton>
-                    <img className="w-4 h-4" src={micIcon} alt="mic-icon"/>
+                    <img className="w-5 h-5" src={micIcon} alt="mic-icon"/>
                 </FullRoundedButton>
                 <FullRoundedButton>
-                    <img className="w-4 h-4" src={cameraIcon} alt="camera-icon"/>
+                    <img className="w-5 h-5" src={cameraIcon} alt="camera-icon"/>
                 </FullRoundedButton>
                 <FullRoundedButton>
-                    <img className="w-4 h-4" src={subtitleIcon} alt="subtitle-icon"/>
+                    <img className="w-5 h-5" src={subtitleIcon} alt="subtitle-icon"/>
                 </FullRoundedButton>
                 <FullRoundedButton>
-                    <img className="w-4 h-4" src={raiseHandIcon} alt="raiseHand-icon"/>
+                    <img className="w-5 h-5" src={presentIcon} alt="screenShare-icon"/>
                 </FullRoundedButton>
                 <FullRoundedButton>
-                    <img className="w-4 h-4" src={presentIcon} alt="screenShare-icon"/>
-                </FullRoundedButton>
-                <FullRoundedButton>
-                    <img className="w-4 h-4" src={menuIcon} alt="menu-icon"/>
+                    <img className="w-5 h-5" src={menuIcon} alt="menu-icon"/>
                 </FullRoundedButton>
                 <div className="h-10 w-1/5 p-2 flex justify-center items-center text-white bg-red-500 rounded-2xl">
-                    <img className="w-4 h-4" src={dialIcon} alt="dial-icon"/>
+                    <img className="w-5 h-5" src={dialIcon} alt="dial-icon"/>
                 </div>
             </div>
             <div className="flex space-x-3 items-center">

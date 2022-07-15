@@ -12,32 +12,32 @@ import {useState,useEffect} from 'react'
 export function MainSection(){
     const [socket, setSocket] = useState(null);
     const [messages, setMessages] = useState({});
-    useEffect(() => {
-        const newSocket = io(`http://${window.location.hostname}:3000`);
-        setSocket(newSocket);
-        return ()=> newSocket.close();
-    },[setSocket]);
-
-    useEffect(()=>{
-        const messageListener = (message,username)=>{
-            setMessages((prevMessages)=>{
-                const newMessages = {...prevMessages};
-                newMessages[messages.id] = message;
-                return newMessages;
-            })
-        }
-        const deleteMessageListener = (messageID)=>{
-            setMessages((prevMessages)=>{
-                const newMessages = {...prevMessages};
-                delete newMessages[messageID];
-                return newMessages;
-            })
-        }
-        socket.on('createMessage',messageListener);
-        return ()=>{
-            socket.off('message',messageListener);
-        }
-    })
+    // useEffect(() => {
+    //     const newSocket = io(`http://${window.location.hostname}:3000`);
+    //     setSocket(newSocket);
+    //     return ()=> newSocket.close();
+    // },[setSocket]);
+    //
+    // useEffect(()=>{
+    //     const messageListener = (message,username)=>{
+    //         setMessages((prevMessages)=>{
+    //             const newMessages = {...prevMessages};
+    //             newMessages[messages.id] = message;
+    //             return newMessages;
+    //         })
+    //     }
+    //     const deleteMessageListener = (messageID)=>{
+    //         setMessages((prevMessages)=>{
+    //             const newMessages = {...prevMessages};
+    //             delete newMessages[messageID];
+    //             return newMessages;
+    //         })
+    //     }
+    //     socket.on('createMessage',messageListener);
+    //     return ()=>{
+    //         socket.off('message',messageListener);
+    //     }
+    // })
     return(
         <div className="flex justify-center space-x-16 mt-4">
             <div className="rounded-xl w-1/2">
